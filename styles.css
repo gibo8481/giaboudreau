@@ -118,3 +118,15 @@ flex-shrink: 0;
 height: 1.5rem;
 flex-shrink: 0;
 }
+li{
+  font-weight: 300;
+  padding: 0.2rem;
+}
+table, th, td {
+    border: 1px solid #757575;
+    border-collapse: collapse;
+    font-weight: 300;
+  }
+td {
+    padding: 8px;
+}
