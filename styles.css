@@ -83,6 +83,24 @@ a:hover{
 height: 100%;
 border: 1px solid #757575;
 }
+.proj-img{
+  width: 68rem;
+  height:100%;
+  border: 1px solid #757575;
+}
+/* .proj-img-tiles{
+  width: 30rem;
+  height: 100%;
+  border: 1px solid #757575;
+} */
+/* .proj-img-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+} */
 .posts{
 display: flex;
 flex-direction: column;
@@ -129,4 +147,48 @@ table, th, td {
   }
 td {
     padding: 8px;
+}
+/* Image Carousel */
+.carousel-container {
+  position: relative;
+  width: 68rem;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.img-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-img {
+  width: 68rem;
+  height: 100%;
+  display: none;
+}
+
+.carousel-img.active {
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0 12px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-btn.left {
+  left: 10px;
+}
+
+.carousel-btn.right {
+  right: 10px;
 }

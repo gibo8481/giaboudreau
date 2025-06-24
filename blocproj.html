@@ -14,97 +14,105 @@
                 <em>Back to Projects </em>
             </a>
         <h1>Capstone Project: bloc <em>Making For Everyone</em></h1>
+        <hr>
+         <p>September 2024 – May 2025</p>
+         <h3 style="text-align: justify;">Redesigning the CNC experience to lower the barrier to entry for beginners through intuitive interaction, built-in safety, guided onboarding, and creative empowerment.</h3>
+        <hr>
+        <div class="carousel-container">
+        <button class="carousel-btn left" onclick="prevImage()">&#10094;</button>
+        <div class="img-carousel">
+            <img src="img/bloc_overall.jpg" alt="bloc overall" class="carousel-img active">
+            <img src="img/bloc_booklet.jpg" alt="bloc booklet" class="carousel-img">
+        </div>
+        <button class="carousel-btn right" onclick="nextImage()">&#10095;</button>
+        </div>
+        <hr>
        <h2>Project Overview</h2>
-       <p>As part of the final year in the Creative Technology and Design program, I completed a two-semester Senior Capstone project focused on collaborative problem-solving and innovation.</p>
-       <!-- <p>I worked with Andrew Widner, Matt Bloomfield, and Sophia Montie to identify a challenge and design a meaningful, human-centered solution by combining our strengths across design, engineering, and prototyping.</p> -->
        <ul>
-        <li><strong>Timeline:</strong> September 2024 – May 2025</li>
         <li><strong>Team:</strong> Andrew Widner, Matt Bloomfield, Sophia Montie</li>
-        <li><strong>Role:</strong> Design Technologist – UX design, testing, instructional design, front-end dev</li>
+        <li><strong>Role:</strong> Design Technologist – UX design, testing, instructional design, front-end dev, social media engagement</li>
         <li><strong>Problem:</strong> CNC machining is inaccessible and intimidating for beginners</li>
         <li><strong>Solution:</strong> Gamified CNC interface, safety enclosure, beginner-friendly learning guide</li>
         </ul>
        <p></p>
-        <h3>Background & Context</h3>
-        <p>We began by exploring the current landscape of STEM education and makerspaces. Our research revealed several key insights:</p>
-        <ul>
-        <!-- <li>Identified a lack of equitable access to STEM and makerspace education, especially in under-resourced areas.</li>
-        <li>Recognized barriers such as limited funding, equipment, and training.</li>
-        <li>Aimed to make STEM and engineering feel less intimidating and more approachable to beginners.</li>
-        <li><b>Believed that anyone—regardless of age or background—should feel empowered to start making.</b></li> -->
-        <li>Lack of equitable access to STEM education in under-resourced areas</li>
-                <li>Barriers: limited funding, equipment, training</li>
-                <li>STEM felt intimidating to beginners</li>
-                <li><strong>Belief:</strong> Anyone—regardless of age or background—should feel empowered to start making</li>
+
         </ul>
         <h2>Problem</h2>
-        <ul>
-        <li>Fabrication can often be intimidating for beginners due to necessary prior knowledge and difficult-to-use machines.</li>
-        <li>Most beginner machines on the market are either expensive or targeted towards younger audiences.</li>
-        <li>Tabletop CNC machines lack critical safety measures and in-depth instruction required to operate them.</li>
-        </ul>
+         <p>
+        For newcomers, fabrication can feel inaccessible. Tools are often complex, the learning curve is steep, and many machines are either expensive or overly simplified specifically for younger audiences,
+        not beginners of any age. 
+        Most tabletop CNC machines on the market lack essential safety features and clear, beginner-friendly onboarding. This creates unnecessary barriers who those who simply want to start making.  
+        Our goal was to eliminate these barriers and empower users to focus on what truly matters: bringing their ideas to life.
+        </p>
         <h3>Target Audience</h3>
         <ul>
-            <li>Older children & middle schoolers (8-14)</li>
+            <li>Beginner makers of all ages</li>
+            <li>Older children & middle schoolers (8–14)</li>
             <li>Parents & educators</li>
-            <li>DIY makers & enthusiasts</li>
+            <li>DIY hobbyists</li>
         </ul>
         <h3>Common Needs</h3>
         <table>
-            <tr> <td><b>Accessibility</b></td>
-                <td>Often too expensive, complex, or unavailable for home or school use</td>
+            <tr>
+                <td><b>Accessibility</b></td>
+                <td>Machines are often too expensive, complicated, or intimidating for first-time users without prior technical experience.</td>
             </tr>
             <tr>
-                <td><b>STEM Gaps</b></td>
-                <td>Existing tools lack practical, real-world applications and are too advanced for beginners, limiting their educational impact</td>
+                <td><b>Age-Inclusive Design</b></td>
+                <td>Most entry-level tools are either overly simplified for children or overly complex for beginners, leaving a gap for approachable, age-flexible tools.</td>
             </tr>
             <tr>
-                <td><b>Existing Curriculum</b></td>
-                <td>Lecture heavy, with limited hands-on or creative expression</td>
+                <td><b>Safety & Guidance</b></td>
+                <td>Tabletop CNCs often lack clear onboarding, safety features, and intuitive interfaces for independent learning.</td>
             </tr>
             <tr>
-                <td><b>Learning Style</b></td>
-                <td>STEM tools frequently overlook the needs of hands-on, exploratory learners who benefit from creative, open-ended activities</td>
+                <td><b>Creative Engagement</b></td>
+                <td>Existing platforms prioritize structured tasks over open-ended exploration, limiting creativity and user agency.</td>
             </tr>
             <tr>
-                <td><b>Home Engagement</b></td>
-                <td>Parents need resources to reinforce school lessons effectively</td>
+                <td><b>Support for Self-Directed Learning</b></td>
+                <td>Beginners benefit from systems that encourage hands-on experimentation with supportive learning moments.</td>
             </tr>
         </table>
-        <h2>Solution Oveview</h2>
+       
+        <hr>
+        <h2>Solution</h2>
          <p>We chose to focus on the CNC machine, a powerful, industry-standard tool, that remains less accessible than more common fabrication technologies like 3D printers or laser cutters. By centering our project around CNC machining, we aimed to bridge that gap and invite more people into the world of fabrication.</p>
          <p>We modified an existing tabletop CNC machine, designed a safety enclosure, built a gamified joystick interface, and created an innovation guide to teach learners the fundamentals of CNC machining.</p>
-         <h3>bloc Objectives & Goals</h3>
-         <h4>Make CNC Accessible</h4>
-         <ul>
-            <li><b>Safer</b>: limit switches, stop button, compact tabletop enclosure, joystick interaction.</li>
-            <li><b>Affordability</b>: built with cheaper materials (e.g. recycled PETG, plexiglass).</li>
-         </ul>
-         <h4>STEM Concept Exposure</h4>
-         <ul>
-            <li><b>Geometry and measurement</b>: axes, angles, and measurements.</li>
-            <li><b>Design thinking and problem-solving</b>: understand, ideate, prototype, test, and improve their designs.</li>
-         </ul>
-         <h4>Hands-on Skill Building</h4>
-         <ul>
-            <li><b>Fabrication techniques</b>: parallel learning between tactile and technological tools.</li>
-            <li><b>Material handling</b>: selecting, preparing, and working with different types of raw materials for fabrication.</li>
-           <li><b>Learning through</b>:
-            imitation → modification → innovation</li>
-         </ul>
-         <h2>My Role</h2>
-         <p> As a Design Technologist, I worked at the intersection of UX design, technical implementation, and communication. My focus was on ensuring the system was intuitive, beginner-friendly, and sustainable for future users and builders.
-            My key contributions included:
-         </p>
-         <ul>
-              <li>Implemented iterative user testing on console layout, learner motivation, and onboarding clarity</li>
-                <li>Tested usability of CNC machine and instruction guide to refine both physical and instructional interactions</li>
-                <li>Researched best practices via expert outreach to ensure innovation guide was accurate and approachable</li>
-                <li>Created a maintainable system for future builders and learners.</li>
-                <li>Led branding, photography, and documentation visuals</li>
-                <li>Developed the website and managed social media presence to spark interest in our project</li>
-    </ul>
-        <img src="img/bloc_overall.jpg" alt="bloc project image" class="post-img">
+         <h3>Design Criteria</h3>
+         <img src="img/design_criteria.jpeg" alt="bloc design criteria" class="proj-img">
+        <hr>
+        <h2>Research Methods & Practice</h2>
+        <h3>Summarized Research</h3>
+        
+        <p>To ground our design in real user needs, we began with extensive qualitative research. We conducted interviews with eight experts, including makerspace educators, technical experts, and individuals from our target audience. These conversations revealed key pain points in the current CNC landscape, ranging from safety concerns to steep learning curves, and helped us understand what beginners truly need to feel confident and capable.
+        </p>
+        <p> Here are some insights we gathered from our interviews:</p>
+        <ul>
+             <li><em>"Develop a system for design processes: plan, double-check steps, and execute with tools."</em></li>
+             <li><em>"CNC complexity is a barrier for beginners; low-tech tactile methods (eg. clay, foam) ease entry."</em></li>
+              <li><em>"Break projects into manageable steps to build foundational skills."</em></li>
+        </ul>
+        <p>We also performed a competitive analysis of existing CNC machines, focusing on safety features, educational support, and accessibility. This precedent research informed the baseline for what our solution needed to improve upon.</p>
+        <p>Throughout the project, we ran iterative user testing at every stage—from early sketch concepts to functional prototypes. We evaluated the usability of our machine, the clarity of our innovation guide, and the layout and interaction flow of our joystick console. Every major design decision was driven by user feedback and behavioral observations.</p>
+         <p>Even our branding and visual identity were shaped by user input, ensuring the final experience felt approachable, empowering, and engaging for beginners of all ages.</p>
+         <h3>Design Process</h3>
+        <h4 style="color: #757575">Figure 1: Iterative sketches of the console and enclosure devices focusing on form, aesthetics, and user flow</h4>
+        <img src="img/concept_dev.jpg" alt="concept development" class="proj-img">
+         <h4 style="color: #757575">Figure 2: User testing revealed natural interaction patterns that shaped iterations in layout, ergonomics, and usability. Console form and visual style refined to align with the enclosure, creating a cohesive and inviting experience.</h4>
+        <img src="img/console_layout.jpeg" alt="bloc user testing console layout" class="proj-img">
+        <h4 style="color: #757575">Figure 3: Branding focused on a playful, approachable feel without skewing childish. Visual language aligned with the product and instructional booklet for a cohesive, welcoming experience. </h4>
+        <img src="img/branding.jpg" alt="bloc branding" class="proj-img">
+        <h4 style="color: #757575">Figure 4: CAD Models exploring features like a hinged lid for material access and built-in dust management. Refined into a more compact, "bloc"-like shape, emphasizing rounded, inviting edges. </h4>
+        <div class="carousel-container">
+        <button class="carousel-btn left" onclick="prevImage()">&#10094;</button>
+        <div class="img-carousel">
+            <img src="img/console_cad.jpg" alt="console cad" class="carousel-img active">
+            <img src="img/enclosure_cad.jpg" alt="enclosure cad" class="carousel-img">
+        </div>
+        <button class="carousel-btn right" onclick="nextImage()">&#10095;</button>
+        </div>
+         
         <p>For more details, please visit the <a href="https://blocnc.com/index.html" target="_blank" rel="noopener noreferrer">bloc website</a>.</p>
         <script src="main.js"></script>
 </body>
