@@ -319,4 +319,61 @@ td {
     min-width: auto;
     position: relative;
   }
+  .posts {
+  width: 100%;
+  gap: 1rem;
+}
+
+.post-tile {
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 2rem;
+}
+
+.post-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.post-blurb {
+  width: 100%;
+  height: auto;
+  padding-left: 0;
+}
+.proj-img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #757575;
+}
+
+.carousel-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.carousel-img {
+  width: 100%;
+  height: auto;
+  display: none;
+  border: 1px solid #757575;
+}
+
+.carousel-img.active {
+  display: block;
+}
+
+.carousel-btn {
+  font-size: 1.5rem;
+  padding: 0.5rem 0.75rem;
+}
+.innovation-img{
+   width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #757575;
+  display: block;
+}
+
 }
