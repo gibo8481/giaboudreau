@@ -5,6 +5,37 @@ body{
     justify-content: center;
     align-items: center;
  }
+ /* Hamburger */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1001;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.hamburger span {
+  background: #009d60;
+  display: block;
+  height:24px;
+  width: 100%; 
+  margin-bottom: 6px;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+/* ===== HAMBURGER ANIMATION ===== */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
 /* Nav Bar */
 .vertical-nav ul {
   list-style: none;
@@ -15,8 +46,8 @@ p{
 }
 .vertical-nav li {
   height: 2.125rem;
-flex-shrink: 0;
-align-self: stretch;
+  flex-shrink: 0;
+  align-self: stretch;
 }
 .vertical-nav a:hover{
   color:#009D60
@@ -25,25 +56,26 @@ align-self: stretch;
   text-decoration: none;
   color: black;
   display: flex;
-height: 18.6875rem;
-flex-direction: column;
-justify-content: space-between;
-align-items: flex-start;
-align-self: stretch;
+  height: 18.6875rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  overflow: visible;
 }
 #navbar{
-   /* display: flex;
-    width: 15.0625rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: auto; */
-     position:fixed;
-    top:45%;
-    left:200px;
-    -webkit-transform:translateY(-50%);
-    transform:translateY(-50%);
-    width:210px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: none;
+  -webkit-transform: none;
+  background-color: white;
+  padding: 1rem;
+  z-index: 999;
+  box-sizing: border-box;
 }
+
 .profile{
     text-align: left;
     color: #009D60;
@@ -60,14 +92,13 @@ align-self: stretch;
     border: 1px solid #757575;
 }
 .card{
-padding: 6rem;
- /* min-height:85vh; */
- 
+    padding: 6rem;
     position:absolute;
     top: 15vh;
     left:400px;
     right:0;
     min-width:600px;
+    margin-top: 3rem;
 }
 a {
   color: black;
@@ -181,4 +212,111 @@ td {
 
 .carousel-btn.right {
   right: 10px;
+}
+/**************Desktop View*****************/
+@media screen and (min-width: 768px) {
+
+  .hamburger {
+    display: none;
+  }
+   #navbar {
+    top: 45%;
+    left: 200px;
+    transform: translateY(-50%);
+    width: 210px;
+  }
+  
+}
+/* Media Queries */
+@media screen and (max-width: 767px) {
+  body {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: none;
+    -webkit-transform: none;
+    background-color: white;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  .vertical-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .profile {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+  }
+
+  .headshot {
+    height: 5rem;
+    width: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #757575;
+  }
+
+  .hamburger {
+     display: flex !important;
+    /* background: red; /* TEMP for visibility */
+    /* z-index: 9999; */ 
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 999;
+    border-top: 1px solid #ccc;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .vertical-nav ul {
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .vertical-nav li {
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .vertical-nav a {
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+  .vertical-nav a:hover {
+    color: #009D60;
+  }
+
+  .card {
+    top: 100px;
+    left: 0;
+    right: 0;
+    padding: 2rem 1rem;
+    min-width: auto;
+    position: relative;
+  }
 }
