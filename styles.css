@@ -180,6 +180,8 @@ td {
 .img-carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  width: 100%;
+  overflow: hidden;
 }
 
 .carousel-img {
@@ -381,15 +383,17 @@ td {
 
 .carousel-container {
   width: 100%;
-  height: auto;
+  height: 100%;
+  margin: auto;
   overflow: hidden;
 }
 
 .carousel-img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: none;
   border: 1px solid #757575;
+  object-fit: contain;
 }
 
 .carousel-img.active {
@@ -408,4 +412,7 @@ td {
   display: block;
 }
 
+}
+video{
+  object-fit: cover;
 }
