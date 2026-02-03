@@ -4,6 +4,7 @@ body{
     /* padding: 12.6875rem; */
     justify-content: center;
     align-items: center;
+    font-feature-settings: "kern" 1;
  }
  /* Hamburger */
 .hamburger {
@@ -94,10 +95,10 @@ p{
 .card{
     padding: 6rem;
     position:absolute;
-    top: 15vh;
-    left:400px;
+    top: 16rem;
+    left: 25rem;
     right:0;
-    min-width:600px;
+    min-width:37.5rem;
     margin-top: 3rem;
 }
 a {
@@ -115,9 +116,10 @@ height: 100%;
 border: 1px solid #757575;
 }
 .proj-img{
-  position: relative;
-  width: 60rem;
-  height:100%;
+ position: relative;
+  width: 100%;
+  max-width: 60rem;
+  height: auto;
   border: 1px solid #757575;
 }
 .posts{
@@ -171,10 +173,10 @@ td {
 /* Image Carousel */
 .carousel-container {
   position: relative;
-  width: 60rem;
-  height: 100%;
+  width: 100%;
+  max-width: 60rem;
+  height: auto;
   margin: auto;
-  /* overflow: hidden; */
 }
 
 .img-carousel {
@@ -185,10 +187,12 @@ td {
 }
 
 .carousel-img {
-  width: 60rem;
-  height: 100%;
+  width: 100%;
+  max-width: 55rem;
+  height: auto;
   display: none;
   border: 1px solid #757575;
+  object-fit: contain;
 }
 
 .carousel-img.active {
@@ -246,7 +250,10 @@ td {
   font-weight: bold;
   cursor: pointer;
 }
-
+#gif{
+  max-width: 50%;
+  height: auto;
+}
 /**************Desktop View*****************/
 @media screen and (min-width: 768px) {
 
@@ -412,7 +419,4 @@ td {
   display: block;
 }
 
-}
-video{
-  object-fit: cover;
 }
