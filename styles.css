@@ -4,7 +4,6 @@ body{
     /* padding: 12.6875rem; */
     justify-content: center;
     align-items: center;
-    font-feature-settings: "kern" 1;
  }
  /* Hamburger */
 .hamburger {
