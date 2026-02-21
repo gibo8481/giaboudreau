@@ -28,6 +28,58 @@
             <li> <b>Technologies: </b>THREE.js, HTML5, CSS3, JavaScript, Blender, Vercel for deployment</li>
             <li> <b>Constraints: </b>3-week timeline, first-time using THREE.js and Blender</li>
         </ul>
+        <hr>
+        <h2>Motivation</h2>
+        <p>I created this project for my Advanced Front-end Web Development class, which only required us to use a JavaScript library, but I specifically chose THREE.js because I'd seen what my friends built with it and thought it was incredible. The immersive 3D experiences they created made me want to dive in and figure it out for myself, even though I knew it would be challenging.</p>
+
+<p>I've worked with CAD software like SketchUp and Fusion 360 before, but I'd never touched Blender. Learning both Blender and THREE.js simultaneously in three weeks was definitely ambitious, but 3D has always been something I find challenging in the best way. It pushes me to think differently about space, interaction, and how users navigate digital environments.</p>
+
+<p>I chose brain anatomy because I wanted this to be more than just a technical exercise. I kept asking myself: <em>how can 3D interaction actually make learning more engaging? </em> A quiz felt like a natural way to combine exploration with education—letting users rotate the brain, click on regions, and test their knowledge in a way that feels active rather than passive.</p>
+
+        <hr>
+
+        <h2>Design Process</h2>
+        <h3>Asset Preparation</h3>
+        <ul>
+            <li>Sourced 3D brain model from <a href="https://poly.cam/capture/FC93B188-ED88-4B05-91B7-B81C766B1614" target="_blank"> <em>Poly Cam</em></a></li>
+            <li>Used Blender to separate mesh components into anatomical regions for individual interaction</li>
+            <li> Basic brain anatomy quiz content was created based on common neuroscience curriculum, focusing on major brain regions and their functions. More information available <a href="https://www.brainfacts.org/3d-brain#intro=false&focus=Brain-cerebellum" target="_blank"><em>here</em></a>.</li>
+        </ul>
+        <h3>Interaction Design</h3>
+        <ul>
+            <li><b>Hover States: </b>How you indicate interactively</li>
+            <li><b>Selection Feedback: </b>Visual highlighting of selected components, color choices</li>
+            <li><b>Quiz Flow: </b> How questions are presented and navigated, right/wrong feedback</li>
+            <li><b>Camera Controls: </b> Orbit and zoom, brain is constrained within view</li>
+        </ul>
+        <h2> Technical Implementation</h2>
+        <h3>Key Challenges</h3>
+        <ul>
+            <li>Debugging THREE.js raycasting and mesh hierarchy - the imported Blender model was read as a tree structure, requiring node traversal and console logging to identify which mesh regions were being clicked, then organizing them into a workable array for quiz logic</li>
+            <li>Lighting setup to make anatomy visible and appealing</li>
+        </ul>
+        <h3> What I Learned</h3>
+        <h4 style="color: #757575">Designing for focus in 3D environments </h4>
+        <p>I kept the quiz interaction in 2D while using the 3D brain purely for visualization. 3D interaction would have been flashy, but it would distract from the educational goal. I also constrained camera zoom and orbit to prevent users from losing orientation.</p>
+        <h4 style="color: #757575">THREE.js scene graph architecture</h4>
+        <p>The biggest technical challenge was understanding how Three.js reads mesh hierarchies as a tree structure. I spent significant time debugging raycasting with console logs, traversing through nodes to figure out how the imported Blender meshes were being parsed, then sorting them into an array for click detection.</p>
+        <h4 style="color: #757575">Balancing aesthetics and functionality</h4>
+        <p>I wanted the floating brain to feel sci-fi and engaging (hence the random highlight colors for fun), but not at the expense of usability. This meant making intentional tradeoffs between visual appeal and keeping the interface learner-focused.</p>
+        <h4 style="color: #757575">Blender as a web asset pipeline tool</h4>
+        <p>I found Blender surprisingly accessible for preparing 3D models for web use, even without deep 3D modeling skills. The creative freedom to modify and export assets for browser integration was eye-opening.</p>
+        <h3>Future Improvements</h3>
+        <ul>
+           <li>Add loading state with progress indicator to provide feedback during 3D asset initialization</li>
+            <li>Optimize polygon count using Blender's decimate modifier to improve load time while preserving anatomical accuracy</li>
+            <li>Expand quiz content to include more brain regions and detailed information</li>
+            <li>Implement scoring system and progress tracking</li>
+        </ul>
+        <hr>
+        <h2>Deliverables</h2>
+        <ul>
+            <li>Live Demo: <a href="https://atls-4630-brain-voyager-final.vercel.app/" target="_blank"><em>View Live Demo</em></a></li>
+            <li>Source Code: <a href="https://github.com/gibo8481/ATLS4630-BrainVoyager?tab=readme-ov-file" target="_blank"><em>View Source Code</em></a></li>
+        </ul>
     </div>
 
     <script src="main.js"></script>
