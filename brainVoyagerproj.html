@@ -17,9 +17,9 @@
         <hr>
         <p>October 2024</p>
         <h3 style="text-align: left">An interactive 3D learning tool built with THREE.js to explore basic brain anatomy through spatial interaction.</h3>
-        <div class="carousel-container">
+        <!-- <div class="carousel-container"> -->
         <img src="img/brainVoyager_demo.gif" alt = "Brain Voyager Demo" class = "carousel-img active" >
-        </div>
+        <!-- </div> -->
         <hr>
         <h2>Project Overview</h2>
         <ul>
@@ -46,11 +46,42 @@
             <li> Basic brain anatomy quiz content was created based on common neuroscience curriculum, focusing on major brain regions and their functions. More information available <a href="https://www.brainfacts.org/3d-brain#intro=false&focus=Brain-cerebellum" target="_blank"><em>here</em></a>.</li>
         </ul>
         <h3>Interaction Design</h3>
-        <ul>
-            <li><b>Hover States: </b>How you indicate interactively</li>
-            <li><b>Selection Feedback: </b>Visual highlighting of selected components, color choices</li>
-            <li><b>Quiz Flow: </b> How questions are presented and navigated, right/wrong feedback</li>
-            <li><b>Camera Controls: </b> Orbit and zoom, brain is constrained within view</li>
+
+            <b>Hover States</b>
+            <ul>
+            <li>Brain regions glow with a random colored emissive effect when the user hovers over them</li>
+            <li>Hover feedback is provided through visual cues and color changes, siginifying the possible action (clicking on the brain region they are targeting)</li>
+            <li> <em style="color: #757575">Why? </em> Makes the action discoverable and engaging without cluttering the interface</li>
+            </ul>
+             <!-- <div class="carousel-container"> -->
+            <img src="img/brainVoyager_hover_gif.gif" alt = "Brain Voyager Hover States" class = "carousel-img active" >
+        <!-- </div> -->
+            <b>Quiz Card</b>
+            <ul>
+            <li>When a brain region is clicked, a quiz card appears to the right with a question about that region's function</li>
+            <li>Users can select an answer, and the card provides immediate feedback on whether they were correct (green for correct, red for incorrect)</li>
+            <li>Auto-dismisses after a set time, or when the user clicks cancel</li>
+            <li> <em style="color: #757575">Why? </em> Quick feedback loop keeps the learning active, auto-dismiss prevents clutter </li>
+            </ul>
+
+            <div class="carousel-container">
+            <button class="carousel-btn left" onclick="prevImage()">&#10094;</button>
+            <div class="img-carousel">
+                <img src="img/brainVoyager_quiz_card.png" alt="Brain Voyager Quiz Card" class="carousel-img active">
+                <img src="img/brainVoyager_quiz_correct.png" alt="Brain Voyager Quiz Card Correct Answer" class="carousel-img">
+                <img src="img/brainVoyager_quiz_incorrect.png" alt="Brain Voyager Quiz Card Incorrect Answer" class="carousel-img">
+            </div>
+            <button class="carousel-btn right" onclick="nextImage()">&#10095;</button>
+            </div>
+
+
+            <b>Camera Controls</b>
+            <ul>
+                <li>Users can orbit around the brain and zoom in/out but within constraint</li>
+                <li>Zoom is limited to 1.5-3 units to keep the brain visible and focused</li>
+                <li>Rotation is limited, cannot rotate below ground plane</li>
+                <li> <em style="color: #757575">Why? </em> Prevents users from disorientation or getting lost, keeping the focus on learning</li>
+            </ul>
         </ul>
         <h2> Technical Implementation</h2>
         <h3>Key Challenges</h3>
@@ -80,8 +111,12 @@
             <li>Live Demo: <a href="https://atls-4630-brain-voyager-final.vercel.app/" target="_blank"><em>View Live Demo</em></a></li>
             <li>Source Code: <a href="https://github.com/gibo8481/ATLS4630-BrainVoyager?tab=readme-ov-file" target="_blank"><em>View Source Code</em></a></li>
         </ul>
+        <!-- Lightbox Model -->
     </div>
-
+        <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Full view">
+    </div>
     <script src="main.js"></script>
 </body>
 
